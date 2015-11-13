@@ -1,0 +1,26 @@
+{
+	"bloomberg": {
+		"apple": "http://www.bloomberg.com/quote/AAPL:US",
+		"microsoft": "http://www.bloomberg.com/quote/MSFT:US",
+		"amazon": "http://www.bloomberg.com/quote/AMZN:US",
+		"tesla": "http://www.bloomberg.com/quote/TSLA:US"
+	},
+
+	"fool": {
+		"apple": "http://www.fool.com/quote/nasdaq/apple/aapl/content",
+		"microsoft": "http://www.fool.com/quote/nasdaq/microsoft/msft/content",
+		"amazon": "http://www.fool.com/quote/nasdaq/amazoncom/amzn/content",
+		"tesla": "http://www.fool.com/quote/nasdaq/tesla-motors/tsla/content"
+	},
+
+	"techCrunch": {
+		"apple": [
+			"http://techcrunch.com/search/apple#stq=apple&stp=1",
+			"http://techcrunch.com/search/apple#stq=apple&stp=2",
+			"http://techcrunch.com/search/apple#stq=apple&stp=3",
+			"http://techcrunch.com/search/apple#stq=apple&stp=4",
+			"http://techcrunch.com/search/apple#stq=apple&stp=5",
+			"http://techcrunch.com/search/apple#stq=apple&stp=6"
+		]
+	}
+}
