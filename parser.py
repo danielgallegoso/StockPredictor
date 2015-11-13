@@ -69,7 +69,7 @@ def parse(row):
 			content = parse_ibtimes(soup)
 		elif domain == 'www.fool.com':
 			content = parse_fool(soup)
-		filename = company + '/' + str(hashlib.sha224(url).hexdigest())
+		filename = company + '/raw/' + str(hashlib.sha224(url).hexdigest())
 		content = content.encode('ascii', 'ignore')
 		filestream = open(filename, 'w+')
 		filestream.write(date + ' ' + content)
