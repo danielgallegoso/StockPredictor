@@ -3,6 +3,17 @@ from bs4 import BeautifulSoup
 import json
 from urlparse import urlparse
 import hashlib
+import csv
+import sys
+
+
+
+'''
+To use this parser from the terminal call it like this:
+
+python parser.py parsing_files/filename
+
+'''
 
 def parse_bloomberg(soup):
 	content = soup.find('div', attrs = {'class': 'article-body__content'})
@@ -32,17 +43,21 @@ def parse_fool(soup):
 		result += p.text + ' '
 	return result
 
-def parse():
-	scrape = open('scrape.json')
-	files = json.load(scrape)
-	scrape.close
-	companies = files.keys()
-	for company in companies:
-		for url in files[company]:
-			html = urllib2.urlopen(url).read()
-			soup = BeautifulSoup(html, "html.parser")
-			domain =  urlparse(url).netloc
-			
+def main(argv):
+	filename = argv[1]
+	csvfile = open(filename, 'rU')
+	reader = csv.reader(csvfile, delimiter = ',', dialect=csv.excel_tab)
+	header = next(reader, None)
+	company = header[2]
+
+	for row in reader:
+		date = row[0]
+		url = row[1]
+		html = urllib2.urlopen(url).read()
+		soup = BeautifulSoup(html, "html.parser")
+		domain =  urlparse(url).netloc
+		
+		try:
 			if domain == 'techcrunch.com':
 				content = parse_techcrunch(soup)
 			elif domain == 'www.bloomberg.com':
@@ -51,13 +66,19 @@ def parse():
 				content = parse_ibtimes(soup)
 			elif domain == 'www.fool.com':
 				content = parse_fool(soup)
+		except AttributeError as e:
+			print e 
 
-			filename = company + '/' + str(hashlib.sha224(url).hexdigest())
-			content = content.encode('ascii', 'ignore')
-			filestream = open(filename, 'w+')
-			filestream.write(content)
-			filestream.close()
+		filename = company + '/' + str(hashlib.sha224(url).hexdigest())
+		content = content.encode('ascii', 'ignore')
+		filestream = open(filename, 'w+')
+		filestream.write(date + ' ' + content)
+		filestream.close()
+		print url
 
+	csvfile.close()
 
-parse()
+if __name__ == "__main__":
+    main(sys.argv)
+
 
