@@ -1,26 +1,72 @@
 {
 	"bloomberg": {
-		"apple": "http://www.bloomberg.com/quote/AAPL:US",
-		"microsoft": "http://www.bloomberg.com/quote/MSFT:US",
-		"amazon": "http://www.bloomberg.com/quote/AMZN:US",
-		"tesla": "http://www.bloomberg.com/quote/TSLA:US"
+		"apple": ["http://www.bloomberg.com/quote/AAPL:US"],
+		"microsoft": ["http://www.bloomberg.com/quote/MSFT:US"],
+		"amazon": ["http://www.bloomberg.com/quote/AMZN:US"],
+		"tesla": ["http://www.bloomberg.com/quote/TSLA:US"]
 	},
 
 	"fool": {
-		"apple": "http://www.fool.com/quote/nasdaq/apple/aapl/content",
-		"microsoft": "http://www.fool.com/quote/nasdaq/microsoft/msft/content",
-		"amazon": "http://www.fool.com/quote/nasdaq/amazoncom/amzn/content",
-		"tesla": "http://www.fool.com/quote/nasdaq/tesla-motors/tsla/content"
+		"apple": ["http://www.fool.com/quote/nasdaq/apple/aapl/content"],
+		"microsoft": ["http://www.fool.com/quote/nasdaq/microsoft/msft/content"],
+		"amazon": ["http://www.fool.com/quote/nasdaq/amazoncom/amzn/content"],
+		"tesla": ["http://www.fool.com/quote/nasdaq/tesla-motors/tsla/content"]
 	},
-
-	"techCrunch": {
+	"ibtimes": {
 		"apple": [
-			"http://techcrunch.com/search/apple#stq=apple&stp=1",
-			"http://techcrunch.com/search/apple#stq=apple&stp=2",
-			"http://techcrunch.com/search/apple#stq=apple&stp=3",
-			"http://techcrunch.com/search/apple#stq=apple&stp=4",
-			"http://techcrunch.com/search/apple#stq=apple&stp=5",
-			"http://techcrunch.com/search/apple#stq=apple&stp=6"
+			"http://www.ibtimes.com/search/site/apple",
+			"http://www.ibtimes.com/search/site/apple?page=1",
+			"http://www.ibtimes.com/search/site/apple?page=2",
+			"http://www.ibtimes.com/search/site/apple?page=3",
+			"http://www.ibtimes.com/search/site/apple?page=4",
+			"http://www.ibtimes.com/search/site/apple?page=5",
+			"http://www.ibtimes.com/search/site/apple?page=6",
+			"http://www.ibtimes.com/search/site/apple?page=7",
+			"http://www.ibtimes.com/search/site/apple?page=8",
+			"http://www.ibtimes.com/search/site/apple?page=9",
+			"http://www.ibtimes.com/search/site/apple?page=10",
+			"http://www.ibtimes.com/search/site/apple?page=11",
+			"http://www.ibtimes.com/search/site/apple?page=12",
+			"http://www.ibtimes.com/search/site/apple?page=13",
+			"http://www.ibtimes.com/search/site/apple?page=14",
+			"http://www.ibtimes.com/search/site/apple?page=15",
+			"http://www.ibtimes.com/search/site/apple?page=16",
+			"http://www.ibtimes.com/search/site/apple?page=17",
+			"http://www.ibtimes.com/search/site/apple?page=18",
+			"http://www.ibtimes.com/search/site/apple?page=19"
+		],
+		"microsoft": [
+			"http://www.ibtimes.com/search/site/microsoft",
+			"http://www.ibtimes.com/search/site/microsoft?page=1",
+			"http://www.ibtimes.com/search/site/microsoft?page=2",
+			"http://www.ibtimes.com/search/site/microsoft?page=3",
+			"http://www.ibtimes.com/search/site/microsoft?page=4",
+			"http://www.ibtimes.com/search/site/microsoft?page=5",
+			"http://www.ibtimes.com/search/site/microsoft?page=6",
+			"http://www.ibtimes.com/search/site/microsoft?page=7",
+			"http://www.ibtimes.com/search/site/microsoft?page=8",
+			"http://www.ibtimes.com/search/site/microsoft?page=9",
+			"http://www.ibtimes.com/search/site/microsoft?page=10",
+			"http://www.ibtimes.com/search/site/microsoft?page=11",
+			"http://www.ibtimes.com/search/site/microsoft?page=12",
+			"http://www.ibtimes.com/search/site/microsoft?page=13"
+		],
+		"amazon": [
+			"http://www.ibtimes.com/search/site/amazon",
+			"http://www.ibtimes.com/search/site/amazon?page=1",
+			"http://www.ibtimes.com/search/site/amazon?page=2",
+			"http://www.ibtimes.com/search/site/amazon?page=3",
+			"http://www.ibtimes.com/search/site/amazon?page=4",
+			"http://www.ibtimes.com/search/site/amazon?page=5",
+			"http://www.ibtimes.com/search/site/amazon?page=6",
+			"http://www.ibtimes.com/search/site/amazon?page=7",
+			"http://www.ibtimes.com/search/site/amazon?page=8",
+			"http://www.ibtimes.com/search/site/amazon?page=9"
+		],
+		"tesla": [
+			"http://www.ibtimes.com/search/site/tesla",
+			"http://www.ibtimes.com/search/site/amazon?page=1"
 		]
+
 	}
 }
