@@ -1,19 +1,19 @@
 {
 	"bloomberg": {
-		"apple": ["http://www.bloomberg.com/quote/AAPL:US"],
-		"microsoft": ["http://www.bloomberg.com/quote/MSFT:US"],
-		"amazon": ["http://www.bloomberg.com/quote/AMZN:US"],
-		"tesla": ["http://www.bloomberg.com/quote/TSLA:US"]
+		"aapl": ["http://www.bloomberg.com/quote/AAPL:US"],
+		"msft": ["http://www.bloomberg.com/quote/MSFT:US"],
+		"amzn": ["http://www.bloomberg.com/quote/AMZN:US"],
+		"tsla": ["http://www.bloomberg.com/quote/TSLA:US"]
 	},
 
 	"fool": {
-		"apple": ["http://www.fool.com/quote/nasdaq/apple/aapl/content"],
-		"microsoft": ["http://www.fool.com/quote/nasdaq/microsoft/msft/content"],
-		"amazon": ["http://www.fool.com/quote/nasdaq/amazoncom/amzn/content"],
-		"tesla": ["http://www.fool.com/quote/nasdaq/tesla-motors/tsla/content"]
+		"aapl": ["http://www.fool.com/quote/nasdaq/apple/aapl/content"],
+		"msft": ["http://www.fool.com/quote/nasdaq/microsoft/msft/content"],
+		"amzn": ["http://www.fool.com/quote/nasdaq/amazoncom/amzn/content"],
+		"tsla": ["http://www.fool.com/quote/nasdaq/tesla-motors/tsla/content"]
 	},
 	"ibtimes": {
-		"apple": [
+		"aapl": [
 			"http://www.ibtimes.com/search/site/apple",
 			"http://www.ibtimes.com/search/site/apple?page=1",
 			"http://www.ibtimes.com/search/site/apple?page=2",
@@ -35,7 +35,7 @@
 			"http://www.ibtimes.com/search/site/apple?page=18",
 			"http://www.ibtimes.com/search/site/apple?page=19"
 		],
-		"microsoft": [
+		"msft": [
 			"http://www.ibtimes.com/search/site/microsoft",
 			"http://www.ibtimes.com/search/site/microsoft?page=1",
 			"http://www.ibtimes.com/search/site/microsoft?page=2",
@@ -51,7 +51,7 @@
 			"http://www.ibtimes.com/search/site/microsoft?page=12",
 			"http://www.ibtimes.com/search/site/microsoft?page=13"
 		],
-		"amazon": [
+		"amzn": [
 			"http://www.ibtimes.com/search/site/amazon",
 			"http://www.ibtimes.com/search/site/amazon?page=1",
 			"http://www.ibtimes.com/search/site/amazon?page=2",
@@ -63,7 +63,7 @@
 			"http://www.ibtimes.com/search/site/amazon?page=8",
 			"http://www.ibtimes.com/search/site/amazon?page=9"
 		],
-		"tesla": [
+		"tsla": [
 			"http://www.ibtimes.com/search/site/tesla",
 			"http://www.ibtimes.com/search/site/amazon?page=1"
 		]
