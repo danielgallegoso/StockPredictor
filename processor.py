@@ -22,7 +22,7 @@ def get_freq_array(dictionary, filename):
 		for token in tokens:
 			if token.lower() == dictionary[i].lower():
 				result[i] += 1
-	return result
+	return result, tokens[0]
 
 	
 
@@ -30,10 +30,30 @@ def main(argv):
 	dictfile = open('dictionary.txt', 'r+')
 	dictionary = dictfile.read().split()
 	dictfile.close()
+
+	csvfile = open('prices.csv', 'rU')
+	reader = csv.reader(csvfile, delimiter = ',', dialect=csv.excel_tab)
+	prices = {}
+	header = next(reader, None)
+	for i in xrange(1, len(header)):
+		prices[header[i]] = {}
+	prev = None
+	for row in reader:
+		if prev:
+			for i in xrange(1, len(row)):
+				prices[header[i]][row[0]] = (float(row[i]) - float(prev[i]))/float(prev[i])
+		prev = row
+	csvfile.close()
+	print prices
+
 	rows = []
+	ys = []
 	for filename in os.listdir(os.getcwd() + '/' + argv[1] + '/raw'):
 		if filename.endswith('.DS_Store') is False:
-			rows.append(get_freq_array(dictionary, argv[1] + '/raw/' + filename))
+			row, date = get_freq_array(dictionary, argv[1] + '/raw/' + filename)
+			ys.append(prices[argv[1]][date])
+			rows.append(row)
+
 	rows = zip(*rows)
 
 	csvfile = open(argv[1] + '/x.csv', 'wb')
@@ -41,6 +61,10 @@ def main(argv):
 	for row in rows:
 		writer.writerow(row)
 	csvfile.close()
+	csvfile = open(argv[1] + '/y.csv', 'wb')
+	csv.writer(csvfile, delimiter = ',').writerow(ys)
+	csvfile.close()
+
 			
 			
 
