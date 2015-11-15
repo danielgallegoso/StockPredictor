@@ -25,12 +25,7 @@ def get_freq_array(dictionary, filename):
 	return result, tokens[0]
 
 	
-
-def main(argv):
-	dictfile = open('dictionary.txt', 'r+')
-	dictionary = dictfile.read().split()
-	dictfile.close()
-
+def get_prices():
 	csvfile = open('prices.csv', 'rU')
 	reader = csv.reader(csvfile, delimiter = ',', dialect=csv.excel_tab)
 	prices = {}
@@ -39,13 +34,18 @@ def main(argv):
 		prices[header[i]] = {}
 	prev = None
 	for row in reader:
-		if prev:
-			for i in xrange(1, len(row)):
-				prices[header[i]][row[0]] = (float(row[i]) - float(prev[i]))/float(prev[i])
-		prev = row
+		for i in xrange(1, len(row)):
+			prices[header[i]][row[0]] = row[i]
 	csvfile.close()
-	print prices
+	return prices
 
+
+
+def main(argv):
+	dictfile = open('dictionary.txt', 'r+')
+	dictionary = dictfile.read().split()
+	dictfile.close()
+	prices = get_prices()
 	rows = []
 	ys = []
 	for filename in os.listdir(os.getcwd() + '/' + argv[1] + '/raw'):
