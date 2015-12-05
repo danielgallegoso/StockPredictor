@@ -58,11 +58,15 @@ def main(argv):
 
 	csvfile = open(argv[1] + '/x.csv', 'wb')
 	writer = csv.writer(csvfile, delimiter = ',')
+	writer.writerow(dictionary)
 	for row in rows:
 		writer.writerow(row)
 	csvfile.close()
 	csvfile = open(argv[1] + '/y.csv', 'wb')
-	csv.writer(csvfile, delimiter = ',').writerow(ys)
+	writer = csv.writer(csvfile, delimiter = ',')
+	writer.writerow(['price_change'])
+	for y in ys:
+		writer.writerow([y])
 	csvfile.close()
 
 			

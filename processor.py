@@ -9,7 +9,6 @@ Based on dictionary.txt will create frequency csv
 
 python processor.py msft
 
-
 '''
 
 def get_freq_array(dictionary, filename):
