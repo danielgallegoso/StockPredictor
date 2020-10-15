@@ -16,6 +16,8 @@ def get_freq_array(dictionary, filename):
 	result = []
 	entry = open(filename, 'r')
 	tokens =  entry.read().split()
+	if len(tokens) > 5000:
+		return None,None
 	entry.close()
 	for i in xrange(0,len(dictionary)):
 		result.append(0)
@@ -51,6 +53,8 @@ def main(argv):
 	for filename in os.listdir(os.getcwd() + '/' + argv[1] + '/stemmed'):
 		if filename.endswith('.DS_Store') is False:
 			row, date = get_freq_array(dictionary, argv[1] + '/stemmed/' + filename)
+			if row is None:
+				continue
 			ys.append(prices[argv[1]][date])
 			rows.append(row)
 
